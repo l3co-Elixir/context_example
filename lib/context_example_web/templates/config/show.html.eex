@@ -1,0 +1,18 @@
+<h1>Show Config</h1>
+
+<ul>
+
+  <li>
+    <strong>Filter name:</strong>
+    <%= @config.filter_name %>
+  </li>
+
+  <li>
+    <strong>Filter status:</strong>
+    <%= @config.filter_status %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.config_path(@conn, :edit, @config) %></span>
+<span><%= link "Back", to: Routes.config_path(@conn, :index) %></span>

@@ -1,0 +1,19 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :filter_name %>
+  <%= checkbox f, :filter_name %>
+  <%= error_tag f, :filter_name %>
+
+  <%= label f, :filter_status %>
+  <%= checkbox f, :filter_status %>
+  <%= error_tag f, :filter_status %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

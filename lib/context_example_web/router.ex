@@ -17,6 +17,10 @@ defmodule ContextExampleWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    resources "/users", UserController
+
+    resources "/config", ConfigController
   end
 
   # Other scopes may use custom stacks.
